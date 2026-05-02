@@ -19,11 +19,6 @@ public class BrimstoneMod extends Mod {
     public void loadContent() {
         BrimstoneItems.load();
         BrimstoneBlocks.load();
-        Drill d = (Drill)content.getByName(ContentType.block, "drill-mark-1");
-        Log.info("drill region null? {0}", d.region == null);
-        Log.info("drill topRegion null? {0}", d.topRegion == null);
-        Log.info("drill rotatorRegion null? {0}", d.rotatorRegion == null);
-
     }
 }
     

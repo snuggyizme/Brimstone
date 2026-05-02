@@ -18,14 +18,14 @@ public class BrimstoneBlocks {
         drill1 = new Drill("drill-mark-1") {{
             tier = 1;
             drillTime = 240f;
-            rotateSpeed = 25f;
+            rotateSpeed = 2.5f;
             size = 2;
             category = Category.production;
             requirements(Category.production, ItemStack.with(BrimstoneItems.pyrite, 10));
-            drawMineItem = false;
+            drawMineItem = true;
 
         }};
-        pyriteore = new OreBlock("pyrite ore") {{
+        pyriteore = new OreBlock("pyriteore") {{
             itemDrop = BrimstoneItems.pyrite;
             oreScale = 0.6f;
             oreThreshold = 0.5f;
