@@ -7,12 +7,11 @@ import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.blocks.production.Drill;
 import mindustry.world.blocks.environment.OreBlock;
-
-import static mindustry.logic.TileLayer.ore;
+import static brimstone.content.BrimstoneItems.pyrite;
 
 public class BrimstoneBlocks {
     public static Drill drill1;
-    public static OreBlock pyriteore;
+    public static OreBlock orepyrite;
 
     public static void load() {
         drill1 = new Drill("drill-mark-1") {{
@@ -21,16 +20,13 @@ public class BrimstoneBlocks {
             rotateSpeed = 2.5f;
             size = 2;
             category = Category.production;
-            requirements(Category.production, ItemStack.with(BrimstoneItems.pyrite, 10));
+            requirements(Category.production, ItemStack.with(pyrite, 10));
             drawMineItem = true;
 
         }};
-        pyriteore = new OreBlock("pyriteore") {{
-            itemDrop = BrimstoneItems.pyrite;
-            oreScale = 0.6f;
-            oreThreshold = 0.5f;
+        orepyrite = new OreBlock(BrimstoneItems.pyrite) {{
             variants = 3;
-            mapColor.set(BrimstoneItems.pyrite.color != null ? BrimstoneItems.pyrite.color : Color.valueOf("aca566"));
+            mapColor.set(pyrite.color != null ? pyrite.color : Color.valueOf("aca566"));
         }};
     }
 }
