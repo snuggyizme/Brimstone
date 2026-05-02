@@ -24,9 +24,9 @@ public class BrimstoneBlocks {
             drawMineItem = true;
 
         }};
-        orepyrite = new OreBlock(BrimstoneItems.pyrite) {{
+        orepyrite = new OreBlock(pyrite) {{
             variants = 3;
             mapColor.set(pyrite.color != null ? pyrite.color : Color.valueOf("aca566"));
-        }};
+            }};
     }
 }
