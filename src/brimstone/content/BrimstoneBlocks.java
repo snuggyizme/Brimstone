@@ -66,7 +66,7 @@ public class BrimstoneBlocks {
                     new DrawDefault(),
                     new DrawGlowRegion() {{
                         alpha = 1.5f;
-                        color = Color.valueOf("ffcc44");
+                        color = Color.valueOf("FFEFA1");
                         glowIntensity = 0.6f;
                         glowScale = 6f;
                     }}

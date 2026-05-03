@@ -16,13 +16,16 @@ import arc.util.*;
 
 import static mindustry.Vars.state;
 import static mindustry.Vars.tilesize;
+import static mindustry.gen.Groups.build;
+import static mindustry.logic.LAccess.building;
+import static mindustry.logic.LAccess.team;
 
 public class CoreVoltBlock extends CoreBlock {
 
     public float lightningChance = 0.2f;
     public float lightningDamage = 50f;
     public int lightningLength = 25;
-    public Color lightningColor = Pal.surge;
+    public Color lightningColor = Color.white;
     public Sound lightningSound = Sounds.shootArc;
 
     public CoreVoltBlock(String name){
@@ -50,7 +53,7 @@ public class CoreVoltBlock extends CoreBlock {
         public void draw(){
             super.draw();
             if(hit > 0.0001f){
-                Draw.color(Color.purple);
+                Draw.color(team.color);
                 Draw.alpha(hit * 0.5f);
                 Draw.blend(Blending.additive);
                 Fill.rect(x, y, tilesize * block.size, tilesize * block.size);
@@ -71,6 +74,9 @@ public class CoreVoltBlock extends CoreBlock {
             CoreVoltBlock b = (CoreVoltBlock)block;
 
             if(b.lightningChance > 0f && Mathf.chance(b.lightningChance)){
+
+                lightningColor = team.color;
+
                 for(int i = 0; i < 5; i++){
                     Lightning.create(
                             team,
