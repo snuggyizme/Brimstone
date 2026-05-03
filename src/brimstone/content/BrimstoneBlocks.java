@@ -1,7 +1,5 @@
 package brimstone.content;
 
-import arc.Core;
-import arc.graphics.g2d.TextureRegion;
 import arc.graphics.Color;
 import mindustry.content.Fx;
 import mindustry.type.Category;
@@ -14,6 +12,7 @@ import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.draw.DrawDefault;
 import mindustry.world.draw.DrawGlowRegion;
 import mindustry.world.draw.DrawMulti;
+import mindustry.world.meta.BlockGroup;
 
 import static brimstone.content.BrimstoneItems.pyrite;
 
@@ -21,6 +20,7 @@ public class BrimstoneBlocks {
     public static Block
             drill1,
             orepyrite,
+            gaspipeline,
             sulfaburna;
 
     public static void load() {
