@@ -5,6 +5,7 @@ import arc.graphics.Color;
 import arc.graphics.g2d.Draw;
 import arc.graphics.g2d.TextureRegion;
 import arc.util.Eachable;
+import brimstone.content.functions.CoreVoltBlock;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.UnitTypes;
@@ -32,7 +33,7 @@ public class BrimstoneBlocks {
             orepyrite,
             gaspipeline,
             sulfaburna;
-    public static CoreBlock
+    public static CoreVoltBlock
             corevolt;
 
     public static void load() {
@@ -71,7 +72,7 @@ public class BrimstoneBlocks {
                     }}
             );
         }};
-        corevolt = new CoreBlock("core-volt") {
+        corevolt = new CoreVoltBlock("core-volt") {
             TextureRegion previewRegion;
             @Override
             public void load(){
