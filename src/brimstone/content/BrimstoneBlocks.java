@@ -31,7 +31,6 @@ public class BrimstoneBlocks {
     public static Block
             drill1,
             orepyrite,
-            gaspipeline,
             sulfaburna;
     public static CoreVoltBlock
             corevolt;
@@ -45,7 +44,6 @@ public class BrimstoneBlocks {
             category = Category.production;
             requirements(Category.production, with(pyrite, 10));
             drawMineItem = true;
-
         }};
         orepyrite = new OreBlock(pyrite) {{
             variants = 3;

@@ -3,6 +3,7 @@ package brimstone;
 import arc.*;
 import arc.util.*;
 import brimstone.content.BrimstoneGas;
+import brimstone.content.BrimstoneTurrets;
 import mindustry.content.Blocks;
 import brimstone.content.BrimstoneBlocks;
 import brimstone.content.BrimstoneItems;
@@ -21,6 +22,7 @@ public class BrimstoneMod extends Mod {
         BrimstoneGas.load();
         BrimstoneItems.load();
         BrimstoneBlocks.load();
+        BrimstoneTurrets.load();
     }
 }
     
