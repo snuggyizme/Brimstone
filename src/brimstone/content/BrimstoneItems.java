@@ -4,7 +4,7 @@ import mindustry.type.Item;
 import arc.graphics.Color;
 
 public class BrimstoneItems {
-    public static Item pyrite, ironoxide, quartz, magnetite;
+    public static Item pyrite, ironoxide, quartz, magnetite, cinnabar;
 
     public static void load() {
 
@@ -24,6 +24,9 @@ public class BrimstoneItems {
         magnetite = new Item("magnetite", Color.valueOf("81868A")) {{
             hardness = 1;
             cost = 3f;
+        }};
+        cinnabar = new Item("cinnabar", Color.valueOf("850000")) {{
+            hardness = 1;
         }};
     }
 }
